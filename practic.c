@@ -2,41 +2,27 @@
 #include <stdlib.h>
 #include <string.h>
 
+typedef struct
+{
+  char*name;
+  char*number;
+  char*DOB;
+}
+people;
+
+
 int main (void)
 {
-  char *name = malloc(20);
+  people person[2];
 
-  if (name == NULL)
-  {
-    printf("you have an error allocating memory\n");
-    return 1;
-  }
-  char *dob = malloc(20);
+  person[0].name = "Don Pullen";
+  person[0].number = "201 926 0483";
+  person[0].DOB = "12/31/1996";
 
-  if (dob == NULL)
-  {
-    printf("something went wrong");
-    return 1;
-  }
+  person[1].name = "Charlie Something";
+  person[1].number = "201-926-0483";
+  person[1].DOB = "01/31/2001";
 
-  char *number = malloc(20);
-  if (number == NULL)
-  {
-    return 1;
-  }
-
-  printf("Enter in your name:\n");
-  fgets(name, 20, stdin);
-
-  printf("Enter in your dob:\n");
-  fgets(dob, 20, stdin);
-
-  printf("Enter in your number:\n");
-  fgets(number, 20, stdin);
-
-  printf("Name: %s \n Dob: %s \n Number %s \n",name,dob,number);
-
-  free(name);
-  free(dob);
-  free(number);
+  printf("%s\n",person[0].name);
+  printf("%s\n",person[1].name);
 }
