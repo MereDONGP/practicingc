@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 typedef struct
 {
@@ -19,7 +20,7 @@ int main (void)
   printf("Enter in a name that you would like to search for\n");
   fgets(user,50,stdin);
 
-  person[0].name = "Don Pullen";
+  person[0].name = "Don Pulle";
   person[0].number = "201 926 0483";
   person[0].DOB = "12/31/1996";
 
